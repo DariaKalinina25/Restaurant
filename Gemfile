@@ -14,6 +14,7 @@ gem "redis", ">= 4.0.1"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem 'rubocop', require: false
+gem "devise", "~> 4.9"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
@@ -27,5 +28,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "devise", "~> 4.9"
