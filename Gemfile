@@ -15,7 +15,6 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem 'rubocop', require: false
 gem "devise", "~> 4.9"
-gem 'bootstrap', '~> 5.3.2'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
