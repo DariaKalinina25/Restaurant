@@ -1,16 +1,43 @@
-<h1>Create a New Cafe</h1>
-<%= form_with(model: @cafe, url: caves_path, method: :post, local: true) do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
 
-  <%= form.label :description %>
-  <%= form.text_area :description %>
+            <div class="pb-5">
 
-  <%= form.label :menu %>
-  <%= form.text_area :menu %>
+              <h2 class="fw-bold mb-2 text-uppercase">Создать кафе</h2>
+              <p class="text-white-50 mb-5">Заполните информацию о вашем кафе</p>
 
-  <%= form.label :photo %>
-  <%= form.file_field :photo %>
+              <%= form_with(model: @cafe, url: caves_path, method: :post, local: true) do |form| %>
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <%= form.text_field :name, class: "form-control form-control-lg", placeholder: "Название кафе" %>
+                  <label class="form-label" for="cafeName">Название кафе</label>
+                </div>
 
-  <%= form.submit "Create Cafe" %>
-<% end %>
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <%= form.text_area :description, class: "form-control form-control-lg", placeholder: "Описание кафе" %>
+                  <label class="form-label" for="cafeDescription">Описание кафе</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <%= form.text_area :menu, class: "form-control form-control-lg", placeholder: "Меню кафе" %>
+                  <label class="form-label" for="cafeMenu">Меню кафе</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <%= form.file_field :photo, class: "form-control form-control-lg" %>
+                  <label class="form-label" for="cafePhoto">Фото кафе</label>
+                </div>
+
+                <%= form.submit "Создать кафе", class: "btn btn-outline-light btn-lg px-5" %>
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
