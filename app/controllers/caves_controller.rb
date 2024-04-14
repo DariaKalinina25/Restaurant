@@ -25,6 +25,6 @@ class CavesController < ApplicationController
   private
 
   def cafe_params
-    params.require(:cafe).permit(:name, :description, :menu)
+    params.require(:cafe).permit(:name, :description, :menu, :photo)
   end
 end
