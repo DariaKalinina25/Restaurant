@@ -23,5 +23,6 @@ module Restaurant
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.paths['app/views'] << "app/views/custom_views"
   end
 end
