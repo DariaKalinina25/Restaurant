@@ -6,15 +6,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Рестораны</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Создать</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">О нас</a>
-          </li>
+          <%= link_to 'Рестораны', caves_path, class: "nav-item nav-link"%>
+          <%= link_to 'Создать', new_cafe_path, class: "nav-item nav-link"%>
+          <%= link_to 'Мои кафе', my_caves_path, class: "nav-item nav-link"%>
         </ul>
         <form class="d-flex" role="search">
           <% if current_user.present? %>

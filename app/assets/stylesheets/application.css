@@ -7,3 +7,54 @@ transform: translateY(-90px);
 .pale-gray-text {
     color: #999; /* HEX значение для бледно-серого цвета */
 }
+
+.content_show-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  margin-top: -50px;
+}
+
+.menu {
+  flex-basis: 30%; /* Ширина меню (слева) */
+}
+
+.image_show-container {
+  flex-basis: 65%; /* Ширина контейнера с изображением и текстом (справа) */
+  display: flex;
+  flex-direction: column;
+}
+
+.img_cafe {
+  max-width: 100%; /* Сделать изображение адаптивным */
+}
+
+.text_show-container {
+  margin-top: 20px; /* Отступ от изображения */
+}
+
+.container_show_square {
+  border: 1px solid gray; /* Устанавливаем серую рамку шириной 1 пиксель */
+  padding: 10px; /* Добавляем внутренние отступы для текста */
+}
+
+.cafe-card {
+  height: 400px !important;
+}
+
+.custom-card-body {
+  position: relative;
+}
+
+.custom-card-body .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 10px;
+}
+
+.top_index {
+    margin-top: -10px;
+}
+

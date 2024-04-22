@@ -5,6 +5,11 @@ class CavesController < ApplicationController
     @caves = Cafe.all
   end
 
+  def my_caves
+    @caves = current_user.caves
+    render :index
+  end
+
   def show
     @cafe = Cafe.find(params[:id])
   end

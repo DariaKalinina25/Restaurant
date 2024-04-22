@@ -1,0 +1,32 @@
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Рестораны и кафе</h1>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <% @caves.each do |cafe| %>
+        <div class="col-md-4">
+          <div class="album py-5 bg-light">
+            <div class="container">
+              <div class="row">
+                <div class="cafe-card mb-4 box-shadow"> <!-- Изменен класс card на cafe-card -->
+                  <% if cafe.photo.attached? %>
+                    <%= image_tag cafe.photo, class: "card-img-top" %>
+                  <% end %>
+                  <div class="cafe-card-body"> <!-- Изменен класс card-body на cafe-card-body -->
+                    <p class="card-text"><%= cafe.name %></p>
+                    <p class="card-text"><%= cafe.description.truncate(100) %></p>
+                    <%= link_to "View", cafe_path(cafe), class: "btn btn-sm btn-outline-secondary" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>
+
