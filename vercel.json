@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "config/rails_server.rb",
+      "use": "@vercel/ruby"
+    }
+  ]
+}
